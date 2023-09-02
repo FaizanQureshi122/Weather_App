@@ -3,6 +3,7 @@ package com.example.weatherapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SearchView
+import android.widget.Toast
 import com.example.weatherapp.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -24,8 +25,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         fetchWeatherData("karachi")
         SearchCity()
+        getData()
     }
-
+    fun getData(){
+        Toast.makeText(this,"f",Toast.LENGTH_LONG)
+    }
     private fun SearchCity() {
         val searchView = binding.searchView
         searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
